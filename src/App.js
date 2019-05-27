@@ -7,7 +7,9 @@ import './App.css';
 function App() {
   return (
     <div className="App allCalc">
-    <Input />
+      
+     <div className="rowz"><Input />
+      </div>
 
       <div className="rowz">
     <Button>7</Button>
@@ -30,16 +32,20 @@ function App() {
     <div className="rowz">
     <Button>0</Button>
     <Button>.</Button>
+    
     <Button>/</Button>
     </div>
     
     <div className="rowz">
     <Button>+</Button>
     <Button>-</Button>
-    <Button>=</Button>
+    <Button>*</Button>
     </div>
 
-  <Clear />
+    <div className="rowz">
+    <Button>=</Button>
+  <Clear>Clear</Clear>
+  </div>
     </div>
   );
 }
