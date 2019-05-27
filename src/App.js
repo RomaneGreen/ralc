@@ -1,14 +1,14 @@
 import React from 'react';
 import Input from './components/Input'
 import Button from './components/Button'
+import Clear from './components/Clear'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App allCalc">
     <Input />
 
-     
       <div className="rowz">
     <Button>7</Button>
     <Button>8</Button>
@@ -39,6 +39,7 @@ function App() {
     <Button>=</Button>
     </div>
 
+  <Clear />
     </div>
   );
 }
