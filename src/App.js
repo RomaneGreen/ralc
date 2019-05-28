@@ -5,13 +5,7 @@ import Clear from './components/Clear'
 import './App.css';
 
 function App() {
-
-      constructor(props){
-        super(props)
-        this.state={
-            input: ''
-        }
-
+      
         handleInput = (digit) => {
 
           const newInput = this.state.input.push(digit)
@@ -19,7 +13,7 @@ function App() {
               input: newInput
             })
         }
-      }
+      
 
   return (
     <div className="App allCalc">
