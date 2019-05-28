@@ -12,7 +12,7 @@ const Button = (props) => {
 
   return (
     <div>
-     <button onClick={props.pushButton}>{props.children}</button>
+     <button onClick={props.depressed}>{props.children}</button>
     </div>
   )
 }

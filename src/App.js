@@ -5,9 +5,22 @@ import Clear from './components/Clear'
 import './App.css';
 
 class App extends Component {
-      
-  
-     render() {
+      constructor(props){
+        super(props)
+
+        this.state={
+          input: ''
+        }
+      }
+     pushButton = (digit) => {
+          console.log(digit)
+          const newInput = this.state.input.push(digit)
+          this.setState({
+            input: newInput
+          })
+           console.log(this.state.input)
+        }
+        render() {
   return (
     <div className="App allCalc">
 
@@ -15,38 +28,38 @@ class App extends Component {
       </div>
 
       <div className="rowz">
-    <Button pushButtonsz={this.pushedButton(7)}>7</Button>
-    <Button onClick={this.pushButton(8)}>8</Button>
-    <Button onClick={this.pushButton(9)}>9</Button>
+    <Button depressed={() => this.pushButton(7)}>7</Button>
+    <Button depressed={() => this.pushButton(8)}>8</Button>
+    <Button depressed={() => this.pushButton(9)}>9</Button>
     </div>
 
     <div className="rowz">
-    <Button onClick={this.pushButton(4)}>4</Button>
-    <Button onClick={this.pushButton(5)}>5</Button>
-    <Button onClick={this.pushButton(6)}>6</Button>
+    <Button onClickz={() => this.pushButton(4)}>4</Button>
+    <Button depressed={() => this.pushButton(5)}>5</Button>
+    <Button depressed={() => this.pushButton(6)}>6</Button>
     </div>
 
     <div className="rowz">
-    <Button onClick={this.pushButton(1)}>1</Button>
-    <Button onClick={this.pushButton(2)}>2</Button>
-    <Button onClick={this.pushButton(3)}>3</Button>
+    <Button depressed={() => this.pushButton(1)}>1</Button>
+    <Button depressed={() => this.pushButton(2)}>2</Button>
+    <Button depressed={() => this.pushButton(3)}>3</Button>
     </div>
 
     <div className="rowz">
-    <Button onClick={this.pushButton(0)}>0</Button>
-    <Button onClick={this.pushButton('.')}>.</Button>
+    <Button depressed={() => this.pushButton(0)}>0</Button>
+    <Button depressed={() => this.pushButton('.')}>.</Button>
     
-    <Button onClick={this.pushButton('/')}>/</Button>
+    <Button depressed={() => this.pushButton('/')}>/</Button>
     </div>
     
     <div className="rowz">
-    <Button onClick={this.pushButton('+')}>+</Button>
-    <Button onClick={this.pushButton('-')}>-</Button>
-    <Button onClick={this.pushButton('*')}>*</Button>
+    <Button depressed={() => this.pushButton('+')}>+</Button>
+    <Button depressed={() => this.pushButton('-')}>-</Button>
+    <Button depressed={() => this.pushButton('*')}>*</Button>
     </div>
 
     <div className="rowz">
-    <Button onClick={this.pushButton('=')}>=</Button>
+    <Button depressed={() => this.pushButton('=')}>=</Button>
   <Clear>Clear</Clear>
   </div>
     </div>
