@@ -28,6 +28,7 @@ class App extends Component {
         this.setState({
           input: evaluatedState
         })
+        console.log(this.state.input)
       }
         render() {
   return (
