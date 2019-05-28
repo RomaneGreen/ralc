@@ -30,6 +30,12 @@ class App extends Component {
         })
         console.log(this.state.input)
       }
+
+      clearScreen = () => {
+        this.setState({
+          input: " "
+        })
+      }
         render() {
   return (
     <div className="App allCalc">
@@ -70,7 +76,7 @@ class App extends Component {
 
     <div className="rowz">
     <Button depressed={() => this.evalTotal('=')}>=</Button>
-  <Clear >Clear</Clear>
+  <Clear clearInput={() => this.clearScreen()} >Clear</Clear>
   </div>
     </div>
   );

@@ -3,7 +3,7 @@ import React from 'react'
 const Clear = (props) => {
     return (
         <div>
-            <button>{props.children}</button>
+            <button onClick={props.clearInput}>{props.children}</button>
         </div>
     )
 }
