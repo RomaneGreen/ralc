@@ -13,14 +13,15 @@ class App extends Component {
         }
       }
      pushButton = (digit) => {
-          console.log(digit)
-          let newInput = this.state.input.slice(0,this.state.input.length)
-          
+         // console.log(digit)
+          let newInput = this.state.input.toString().slice(0,this.state.input.length)
           let newerInput = newInput.concat(digit)
+
           this.setState({
             input: newerInput
           })
            console.log(this.state.input)
+           
         }
       evalTotal = () => {
         const evaluatedState = eval(this.state.input)
@@ -29,12 +30,14 @@ class App extends Component {
           input: evaluatedState
         })
         console.log(this.state.input)
+        
       }
 
       clearScreen = () => {
         this.setState({
-          input: " "
+          input: ''
         })
+
       }
         render() {
   return (
