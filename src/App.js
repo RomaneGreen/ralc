@@ -14,9 +14,9 @@ class App extends Component {
       }
      pushButton = (digit) => {
           console.log(digit)
-          const newInput = this.state.input
-          let newerInput = newInput.concat(digit)
+          let newInput = this.state.input.slice(0,this.state.input.length)
           
+          let newerInput = newInput.concat(digit)
           this.setState({
             input: newerInput
           })
@@ -50,7 +50,7 @@ class App extends Component {
     </div>
 
     <div className="rowz">
-    <Button onClickz={() => this.pushButton(4)}>4</Button>
+    <Button depressed={() => this.pushButton(4)}>4</Button>
     <Button depressed={() => this.pushButton(5)}>5</Button>
     <Button depressed={() => this.pushButton(6)}>6</Button>
     </div>
