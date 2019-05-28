@@ -34,7 +34,7 @@ class App extends Component {
   return (
     <div className="App allCalc">
 
-     <div className="rowz"><Input />
+     <div className="rowz"><Input display={this.state.input} />
       </div>
 
       <div className="rowz">
@@ -70,7 +70,7 @@ class App extends Component {
 
     <div className="rowz">
     <Button depressed={() => this.evalTotal('=')}>=</Button>
-  <Clear>Clear</Clear>
+  <Clear >Clear</Clear>
   </div>
     </div>
   );
