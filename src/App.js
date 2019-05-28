@@ -14,12 +14,21 @@ class App extends Component {
       }
      pushButton = (digit) => {
           console.log(digit)
-          const newInput = this.state.input.push(digit)
+          const newInput = this.state.input
+          let newerInput = newInput.concat(digit)
+          
           this.setState({
-            input: newInput
+            input: newerInput
           })
            console.log(this.state.input)
         }
+      evalTotal = () => {
+        const evaluatedState = eval(this.state.input)
+
+        this.setState({
+          input: evaluatedState
+        })
+      }
         render() {
   return (
     <div className="App allCalc">
@@ -59,7 +68,7 @@ class App extends Component {
     </div>
 
     <div className="rowz">
-    <Button depressed={() => this.pushButton('=')}>=</Button>
+    <Button depressed={() => this.evalTotal('=')}>=</Button>
   <Clear>Clear</Clear>
   </div>
     </div>
