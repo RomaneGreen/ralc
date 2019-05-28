@@ -1,14 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Input from './components/Input'
 import Button from './components/Button'
 import Clear from './components/Clear'
 import './App.css';
 
-function App() {
+class App extends Component {
       
-      pushButton = () => {
-
-      }
+  
+     render() {
   return (
     <div className="App allCalc">
 
@@ -16,7 +15,7 @@ function App() {
       </div>
 
       <div className="rowz">
-    <Button onClick={this.pushButton(7)}>7</Button>
+    <Button pushButtonsz={this.pushedButton(7)}>7</Button>
     <Button onClick={this.pushButton(8)}>8</Button>
     <Button onClick={this.pushButton(9)}>9</Button>
     </div>
@@ -52,6 +51,7 @@ function App() {
   </div>
     </div>
   );
+  }
 }
 
 export default App;
