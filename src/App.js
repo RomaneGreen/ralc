@@ -52,6 +52,8 @@ class App extends Component {
         backgroundColor: 'black',
        
       }
+
+      
   return (
     <div style={calcStyle}  className="App allCalc">
 
@@ -59,13 +61,13 @@ class App extends Component {
      </div>
 
       <div className="rowz">
-    <Button depressed={() => this.pushButton(7)}>7</Button>
-    <Button depressed={() => this.pushButton(8)}>8</Button>
-    <Button depressed={() => this.pushButton(9)}>9</Button>
+    <Button  depressed={() => this.pushButton(7)}>7</Button>
+    <Button  depressed={() => this.pushButton(8)}>8</Button>
+    <Button  depressed={() => this.pushButton(9)}>9</Button>
     </div>
 
     <div className="rowz">
-    <Button depressed={() => this.pushButton(4)}>4</Button>
+    <Button  depressed={() => this.pushButton(4)}>4</Button>
     <Button depressed={() => this.pushButton(5)}>5</Button>
     <Button depressed={() => this.pushButton(6)}>6</Button>
     </div>
@@ -74,22 +76,23 @@ class App extends Component {
     <Button depressed={() => this.pushButton(1)}>1</Button>
     <Button depressed={() => this.pushButton(2)}>2</Button>
     <Button depressed={() => this.pushButton(3)}>3</Button>
+    
     </div>
 
-    <div className="rowz">
+    <div className="rowz spbutton">
+   
     <Button depressed={() => this.pushButton(0)}>0</Button>
     <Button depressed={() => this.pushButton('.')}>.</Button>
-    
     <Button depressed={() => this.pushButton('/')}>/</Button>
     </div>
     
-    <div className="rowz">
-    <Button depressed={() => this.pushButton('+')}>+</Button>
+    <div className="rowz spbutton">
+    <Button className="spbutton" depressed={() => this.pushButton('+')}>+</Button>
     <Button depressed={() => this.pushButton('-')}>-</Button>
     <Button depressed={() => this.pushButton('*')}>*</Button>
     </div>
 
-    <div className="rowz">
+    <div className="rowz spbutton">
     <Button depressed={() => this.evalTotal('=')}>=</Button>
   <Clear clearInput={() => this.clearScreen()} >C</Clear>
   </div>
