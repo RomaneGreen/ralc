@@ -9,7 +9,7 @@ const Button = (props) => {
 
   return (
     <div>
-     <button className={`${isOperator(props.children) ? "operator" : null }`} onClick={props.depressed}>{props.children}</button>
+     <button className={isOperator(props.children) ? "operator" : null } onClick={props.depressed}>{props.children}</button>
     </div>
   )
 }
