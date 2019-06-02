@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
+    
     
     
 }
@@ -15,7 +15,17 @@
     margin-top: 10%
 
 }
-/* 
-button {
-   
+
+/* input {
+    
 } */
+button {
+   background-color: #DCDCDC;
+   border-radius: 50%;
+   margin: .05rem;
+   height: 50px;
+   width: 50px;
+   font-size: 30px;
+    
+   
+}

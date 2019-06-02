@@ -39,12 +39,24 @@ class App extends Component {
         })
 
       }
-        render() {
-  return (
-    <div className="App allCalc">
 
-     <div className="rowz"><Input display={this.state.input} />
-      </div>
+        render() {
+
+      const calcStyle = {
+        border: '1px solid black',
+        marginTop: '11rem',
+        marginLeft: '35rem',
+        marginRight: '30rem',
+        paddingLeft: '-13rem',
+        paddingRight: '-12rem',
+        backgroundColor: 'black',
+       
+      }
+  return (
+    <div style={calcStyle}  className="App allCalc">
+
+     <div  className="rowz"><Input display={this.state.input} />
+     </div>
 
       <div className="rowz">
     <Button depressed={() => this.pushButton(7)}>7</Button>
@@ -79,9 +91,10 @@ class App extends Component {
 
     <div className="rowz">
     <Button depressed={() => this.evalTotal('=')}>=</Button>
-  <Clear clearInput={() => this.clearScreen()} >Clear</Clear>
+  <Clear clearInput={() => this.clearScreen()} >C</Clear>
   </div>
     </div>
+    
   );
   }
 }
